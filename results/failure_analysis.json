@@ -1,0 +1,322 @@
+{
+ "n_test": 8041,
+ "overall_error_rate": 0.07710483770675289,
+ "categories": [
+  {
+   "key": "same_model_other_year",
+   "description": "errors where make+model are right but the year/trim is wrong",
+   "n_errors": 38,
+   "share_of_all_errors": 0.06129032258064516,
+   "error_rate_in_group": null,
+   "group_size": 8041,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "Consecutive model years / trims of one model differ only in small details (bumper, grille, lamp shape, wheels). At 256 px those cues are a few pixels wide and the visual evidence is genuinely ambiguous.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\04524.jpg",
+     "gt": "Bentley Continental GT Coupe 2007",
+     "pred": "Bentley Continental GT Coupe 2012",
+     "confidence": 0.9995,
+     "iou": 0.902,
+     "mean_luminance": 0.32528783333530953,
+     "vehicle_area_fraction": 0.20806573717746515
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\01587.jpg",
+     "gt": "Honda Odyssey Minivan 2007",
+     "pred": "Honda Odyssey Minivan 2012",
+     "confidence": 0.9993,
+     "iou": 0.969,
+     "mean_luminance": 0.7268787823771484,
+     "vehicle_area_fraction": 0.5895470723026669
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06604.jpg",
+     "gt": "Dodge Caliber Wagon 2007",
+     "pred": "Dodge Caliber Wagon 2012",
+     "confidence": 0.9975,
+     "iou": 0.929,
+     "mean_luminance": 0.5172935738239827,
+     "vehicle_area_fraction": 0.7419006744328632
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\05831.jpg",
+     "gt": "Dodge Caliber Wagon 2012",
+     "pred": "Dodge Caliber Wagon 2007",
+     "confidence": 0.997,
+     "iou": 0.942,
+     "mean_luminance": 0.350813580889583,
+     "vehicle_area_fraction": 0.7208918617614269
+    }
+   ],
+   "gallery": "failure_same_model_other_year.jpg"
+  },
+  {
+   "key": "same_make_other_model",
+   "description": "errors within the right make but wrong model",
+   "n_errors": 337,
+   "share_of_all_errors": 0.5435483870967742,
+   "error_rate_in_group": null,
+   "group_size": 8041,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "Models of one manufacturer share a design language (grille, headlight signature) and body style; the network matched the family but not the specific model.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\01735.jpg",
+     "gt": "HUMMER H2 SUT Crew Cab 2009",
+     "pred": "HUMMER H3T Crew Cab 2010",
+     "confidence": 1.0,
+     "iou": 0.91,
+     "mean_luminance": 0.5227903131401814,
+     "vehicle_area_fraction": 0.437483583489681
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\02796.jpg",
+     "gt": "Spyker C8 Convertible 2009",
+     "pred": "Spyker C8 Coupe 2009",
+     "confidence": 1.0,
+     "iou": 0.967,
+     "mean_luminance": 0.5148147467320261,
+     "vehicle_area_fraction": 0.752734375
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06597.jpg",
+     "gt": "Bugatti Veyron 16.4 Coupe 2009",
+     "pred": "Bugatti Veyron 16.4 Convertible 2009",
+     "confidence": 0.9998,
+     "iou": 0.955,
+     "mean_luminance": 0.22315745634191175,
+     "vehicle_area_fraction": 0.4675038655598958
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\01286.jpg",
+     "gt": "Ferrari 458 Italia Coupe 2012",
+     "pred": "Ferrari 458 Italia Convertible 2012",
+     "confidence": 0.9998,
+     "iou": 0.982,
+     "mean_luminance": 0.7052998470310109,
+     "vehicle_area_fraction": 0.23343283582089552
+    }
+   ],
+   "gallery": "failure_same_make_other_model.jpg"
+  },
+  {
+   "key": "confident_cross_make",
+   "description": "wrong make with confidence >= tau_exact (0.10)",
+   "n_errors": 245,
+   "share_of_all_errors": 0.3951612903225806,
+   "error_rate_in_group": null,
+   "group_size": 8041,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "High-confidence confusion between different makes: look-alike body styles/colours, or label noise. Indicates over-confidence, which temperature scaling only partly corrects.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06675.jpg",
+     "gt": "Chevrolet Express Cargo Van 2007",
+     "pred": "GMC Savana Van 2012",
+     "confidence": 0.9964,
+     "iou": 0.857,
+     "mean_luminance": 0.6084552357113059,
+     "vehicle_area_fraction": 0.39988235294117647
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\05250.jpg",
+     "gt": "Dodge Durango SUV 2007",
+     "pred": "Chrysler Aspen SUV 2009",
+     "confidence": 0.992,
+     "iou": 0.929,
+     "mean_luminance": 0.4586940127221457,
+     "vehicle_area_fraction": 0.5301342725071538
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\00802.jpg",
+     "gt": "Chevrolet Silverado 2500HD Regular Cab 2012",
+     "pred": "GMC Canyon Extended Cab 2012",
+     "confidence": 0.99,
+     "iou": 0.901,
+     "mean_luminance": 0.6378261689291101,
+     "vehicle_area_fraction": 0.4126540728831726
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06180.jpg",
+     "gt": "Mercedes-Benz Sprinter Van 2012",
+     "pred": "Dodge Sprinter Cargo Van 2009",
+     "confidence": 0.9882,
+     "iou": 0.918,
+     "mean_luminance": 0.5318210970464136,
+     "vehicle_area_fraction": 0.6959746031746031
+    }
+   ],
+   "gallery": "failure_confident_cross_make.jpg"
+  },
+  {
+   "key": "poor_localisation",
+   "description": "errors with box IoU < 0.5",
+   "n_errors": 13,
+   "share_of_all_errors": 0.020967741935483872,
+   "error_rate_in_group": 0.5,
+   "group_size": 26,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "The vehicle box missed part of the car or covered a different vehicle, so the crop lost discriminative parts or contained distractors.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\01461.jpg",
+     "gt": "AM General Hummer SUV 2000",
+     "pred": "HUMMER H2 SUT Crew Cab 2009",
+     "confidence": 0.8352,
+     "iou": 0.447,
+     "mean_luminance": 0.26789669571532315,
+     "vehicle_area_fraction": 0.4466501240694789
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\04295.jpg",
+     "gt": "Geo Metro Convertible 1993",
+     "pred": "smart fortwo Convertible 2012",
+     "confidence": 0.7978,
+     "iou": 0.334,
+     "mean_luminance": 0.4743279340721796,
+     "vehicle_area_fraction": 0.8418539325842697
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06990.jpg",
+     "gt": "Acura RL Sedan 2012",
+     "pred": "Audi TTS Coupe 2012",
+     "confidence": 0.5693,
+     "iou": 0.041,
+     "mean_luminance": 0.4492716339869281,
+     "vehicle_area_fraction": 0.7406197654941373
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\07147.jpg",
+     "gt": "Volkswagen Golf Hatchback 1991",
+     "pred": "Volvo 240 Sedan 1993",
+     "confidence": 0.4669,
+     "iou": 0.321,
+     "mean_luminance": 0.38102979473039217,
+     "vehicle_area_fraction": 0.6099923404461404
+    }
+   ],
+   "gallery": "failure_poor_localisation.jpg"
+  },
+  {
+   "key": "difficult_illumination",
+   "description": "errors on dark (L<0.30) or bright (L>0.75) images",
+   "n_errors": 69,
+   "share_of_all_errors": 0.11129032258064517,
+   "error_rate_in_group": 0.11311475409836065,
+   "group_size": 610,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "Very dark / washed-out images: colour and fine edge cues are lost or noisy; classical normalisation recovers some but not all of the information.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06597.jpg",
+     "gt": "Bugatti Veyron 16.4 Coupe 2009",
+     "pred": "Bugatti Veyron 16.4 Convertible 2009",
+     "confidence": 0.9998,
+     "iou": 0.955,
+     "mean_luminance": 0.22315745634191175,
+     "vehicle_area_fraction": 0.4675038655598958
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\02084.jpg",
+     "gt": "GMC Yukon Hybrid SUV 2012",
+     "pred": "GMC Terrain SUV 2012",
+     "confidence": 0.9981,
+     "iou": 0.881,
+     "mean_luminance": 0.2845054466230937,
+     "vehicle_area_fraction": 0.41670717592592593
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06005.jpg",
+     "gt": "BMW 6 Series Convertible 2007",
+     "pred": "BMW M6 Convertible 2010",
+     "confidence": 0.9972,
+     "iou": 0.885,
+     "mean_luminance": 0.7870763888888889,
+     "vehicle_area_fraction": 0.365234375
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\07627.jpg",
+     "gt": "Chevrolet Silverado 1500 Regular Cab 2012",
+     "pred": "Chevrolet Silverado 2500HD Regular Cab 2012",
+     "confidence": 0.9962,
+     "iou": 0.962,
+     "mean_luminance": 0.25631597222222224,
+     "vehicle_area_fraction": 0.3759993489583333
+    }
+   ],
+   "gallery": "failure_difficult_illumination.jpg"
+  },
+  {
+   "key": "small_vehicle",
+   "description": "errors where the car covers < 8 % of the image",
+   "n_errors": 1,
+   "share_of_all_errors": 0.0016129032258064516,
+   "error_rate_in_group": 0.125,
+   "group_size": 8,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "The vehicle covers a small image area, so after cropping and resizing few pixels carry the discriminative detail.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\05320.jpg",
+     "gt": "Maybach Landaulet Convertible 2012",
+     "pred": "Dodge Caliber Wagon 2012",
+     "confidence": 0.3501,
+     "iou": 0.878,
+     "mean_luminance": 0.5679577249339451,
+     "vehicle_area_fraction": 0.06862745098039216
+    }
+   ],
+   "gallery": "failure_small_vehicle.jpg"
+  },
+  {
+   "key": "extreme_viewpoint",
+   "description": "errors with extreme box aspect ratio (outer 5 % tails)",
+   "n_errors": 114,
+   "share_of_all_errors": 0.18387096774193548,
+   "error_rate_in_group": 0.1417910447761194,
+   "group_size": 804,
+   "overall_error_rate": 0.07710483770675289,
+   "likely_cause": "Rare, strongly oblique or head-on/rear views (extreme box aspect ratios) are under-represented in training.",
+   "examples": [
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\02796.jpg",
+     "gt": "Spyker C8 Convertible 2009",
+     "pred": "Spyker C8 Coupe 2009",
+     "confidence": 1.0,
+     "iou": 0.967,
+     "mean_luminance": 0.5148147467320261,
+     "vehicle_area_fraction": 0.752734375
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06597.jpg",
+     "gt": "Bugatti Veyron 16.4 Coupe 2009",
+     "pred": "Bugatti Veyron 16.4 Convertible 2009",
+     "confidence": 0.9998,
+     "iou": 0.955,
+     "mean_luminance": 0.22315745634191175,
+     "vehicle_area_fraction": 0.4675038655598958
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\01587.jpg",
+     "gt": "Honda Odyssey Minivan 2007",
+     "pred": "Honda Odyssey Minivan 2012",
+     "confidence": 0.9993,
+     "iou": 0.969,
+     "mean_luminance": 0.7268787823771484,
+     "vehicle_area_fraction": 0.5895470723026669
+    },
+    {
+     "path": "C:\\p5_work\\data\\stanford_cars\\cars_test\\06005.jpg",
+     "gt": "BMW 6 Series Convertible 2007",
+     "pred": "BMW M6 Convertible 2010",
+     "confidence": 0.9972,
+     "iou": 0.885,
+     "mean_luminance": 0.7870763888888889,
+     "vehicle_area_fraction": 0.365234375
+    }
+   ],
+   "gallery": "failure_extreme_viewpoint.jpg"
+  }
+ ]
+}

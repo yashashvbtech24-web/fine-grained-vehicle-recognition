@@ -1,0 +1,19 @@
+# CPU build of PyTorch (used by the hosted app). On a GPU machine install the CUDA build of torch/torchvision first
+# (see README); pip then keeps it because the requirement below is already satisfied.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+timm==1.0.31
+ultralytics==8.4.205
+scikit-learn==1.9.1
+scipy
+scikit-image
+numpy
+pandas
+matplotlib
+joblib
+tqdm
+streamlit==1.67.0
+pillow
+pyyaml
+opencv-python

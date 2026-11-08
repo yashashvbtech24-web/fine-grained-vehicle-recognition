@@ -1,0 +1,16 @@
+{
+  "team_id": "TODO_TEAM_ID",
+  "problem_id": "P5",
+  "members": [
+    {
+      "name": "Yashas H V",
+      "usn": "1RUA24CSE0546",
+      "contribution": "Vehicle detection, classical CV pipeline, hybrid fusion and low-confidence handling, Streamlit app"
+    },
+    {
+      "name": "YARASANI PHANINDAR REDDY",
+      "usn": "1RUA24CSE0542",
+      "contribution": "ConvNeXt classifier training and tuning, evaluation, ablation, robustness, optimisation, failure analysis, report"
+    }
+  ]
+}

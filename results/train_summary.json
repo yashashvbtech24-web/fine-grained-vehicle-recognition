@@ -1,0 +1,21 @@
+{
+ "arch": "convnext_tiny.fb_in22k_ft_in1k",
+ "img_size": 256,
+ "epochs": 10,
+ "batch_size": 32,
+ "lr_backbone": 0.0002,
+ "lr_head": 0.002,
+ "weight_decay": 0.05,
+ "label_smoothing": 0.1,
+ "optimizer": "AdamW",
+ "schedule": "1 epoch linear warm-up + cosine decay",
+ "mixed_precision": true,
+ "pretrained": true,
+ "n_train": 7356,
+ "n_val": 788,
+ "best_val_top1": 0.9251269035532995,
+ "best_val_top5": 0.9923857868020305,
+ "temperature": 0.578057587146759,
+ "train_seconds": 576,
+ "device": "cuda"
+}

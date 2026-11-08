@@ -1,0 +1,102 @@
+{
+ "n_images": 500,
+ "device": "cuda",
+ "classifier": [
+  {
+   "variant": "FP32 (cuda)",
+   "size_mb": 111.95,
+   "gzip_size_mb": 104.23,
+   "top1": 0.91,
+   "top5": 0.986,
+   "latency_ms_bs1": 5.468549992656335,
+   "throughput_img_s_bs32": 204.82477564090885,
+   "top1_delta_vs_fp32": 0.0,
+   "speedup_vs_fp32_bs1": 1.0
+  },
+  {
+   "variant": "FP16 (cuda)",
+   "size_mb": 56.01,
+   "gzip_size_mb": 51.98,
+   "top1": 0.91,
+   "top5": 0.986,
+   "latency_ms_bs1": 5.606199993053451,
+   "throughput_img_s_bs32": 471.4857916802151,
+   "top1_delta_vs_fp32": 0.0,
+   "speedup_vs_fp32_bs1": 0.9754468266262931
+  },
+  {
+   "variant": "FP32 (cpu)",
+   "size_mb": 111.95,
+   "gzip_size_mb": 104.23,
+   "top1": 0.91,
+   "top5": 0.986,
+   "latency_ms_bs1": 45.786600006977096,
+   "throughput_img_s_bs32": 27.071376984877382,
+   "top1_delta_vs_fp32": 0.0,
+   "speedup_vs_fp32_bs1": 0.11943559888314532
+  },
+  {
+   "variant": "INT8 dynamic, Linear layers (cpu)",
+   "size_mb": 33.89,
+   "gzip_size_mb": 25.71,
+   "top1": 0.916,
+   "top5": 0.988,
+   "latency_ms_bs1": 32.19744999660179,
+   "throughput_img_s_bs32": 48.00508134022625,
+   "top1_delta_vs_fp32": 0.006000000000000005,
+   "speedup_vs_fp32_bs1": 0.16984419552584137
+  },
+  {
+   "variant": "Pruned 30% L1-global (cuda)",
+   "size_mb": 111.95,
+   "gzip_size_mb": 83.15,
+   "top1": 0.812,
+   "top5": 0.944,
+   "latency_ms_bs1": 5.230150010902435,
+   "throughput_img_s_bs32": 203.67123772352065,
+   "top1_delta_vs_fp32": -0.09799999999999998,
+   "speedup_vs_fp32_bs1": 1.045581863093209
+  },
+  {
+   "variant": "Pruned 50% L1-global (cuda)",
+   "size_mb": 111.95,
+   "gzip_size_mb": 66.01,
+   "top1": 0.104,
+   "top5": 0.29,
+   "latency_ms_bs1": 5.2232999878469855,
+   "throughput_img_s_bs32": 202.98070829185414,
+   "top1_delta_vs_fp32": -0.806,
+   "speedup_vs_fp32_bs1": 1.0469530766718302
+  },
+  {
+   "variant": "Pruned 30% + FP16 (cuda)",
+   "size_mb": 56.01,
+   "gzip_size_mb": 43.73,
+   "top1": 0.812,
+   "top5": 0.944,
+   "latency_ms_bs1": 5.699549976270646,
+   "throughput_img_s_bs32": 448.0917243441015,
+   "top1_delta_vs_fp32": -0.09799999999999998,
+   "speedup_vs_fp32_bs1": 0.959470487218105
+  }
+ ],
+ "detector": [
+  {
+   "precision": "FP32",
+   "ok": true,
+   "median_ms": 9.539549966575578,
+   "weights_mb": 22.59
+  },
+  {
+   "precision": "FP16",
+   "ok": true,
+   "median_ms": 9.50910002575256,
+   "weights_mb": 22.59
+  }
+ ],
+ "notes": {
+  "sparsity_0.3": 0.2999999856664362,
+  "sparsity_0.5": 0.5
+ },
+ "torch": "2.14.1+cu130"
+}

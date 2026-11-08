@@ -1,0 +1,454 @@
+{
+ "n_images": 200,
+ "seed": 42,
+ "conditions": {
+  "clean": {
+   "classical": {
+    "top1": 0.075,
+    "top5": 0.195,
+    "make_acc": 0.165,
+    "mean_confidence": 0.3933487131851971,
+    "mean_iou": 0.6469655625155107
+   },
+   "dl": {
+    "top1": 0.935,
+    "top5": 0.985,
+    "make_acc": 0.965,
+    "mean_confidence": 0.9331543069332838,
+    "mean_iou": 0.9491094309053534
+   },
+   "hybrid": {
+    "top1": 0.935,
+    "top5": 0.98,
+    "make_acc": 0.96,
+    "mean_confidence": 0.9258671994507313,
+    "mean_iou": 0.8942518763033976
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.935,
+    "reject_rate": 0.0
+   }
+  },
+  "low light": {
+   "classical": {
+    "top1": 0.045,
+    "top5": 0.13,
+    "make_acc": 0.105,
+    "mean_confidence": 0.4076194892249783,
+    "mean_iou": 0.6184368404019766
+   },
+   "dl": {
+    "top1": 0.92,
+    "top5": 0.965,
+    "make_acc": 0.97,
+    "mean_confidence": 0.900047118589282,
+    "mean_iou": 0.920476577152155
+   },
+   "hybrid": {
+    "top1": 0.895,
+    "top5": 0.96,
+    "make_acc": 0.94,
+    "mean_confidence": 0.8802331073582172,
+    "mean_iou": 0.8764990211784527
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.895,
+    "reject_rate": 0.0
+   }
+  },
+  "very low light": {
+   "classical": {
+    "top1": 0.01,
+    "top5": 0.065,
+    "make_acc": 0.05,
+    "mean_confidence": 0.42338743739240653,
+    "mean_iou": 0.5983701492377459
+   },
+   "dl": {
+    "top1": 0.78,
+    "top5": 0.905,
+    "make_acc": 0.825,
+    "mean_confidence": 0.7953039158135653,
+    "mean_iou": 0.8390413486684545
+   },
+   "hybrid": {
+    "top1": 0.73,
+    "top5": 0.875,
+    "make_acc": 0.775,
+    "mean_confidence": 0.7687240018695592,
+    "mean_iou": 0.8151303419731296
+   },
+   "hybrid_decisions": {
+    "accept_rate": 0.995,
+    "accepted_acc": 0.7336683417085427,
+    "reject_rate": 0.005
+   }
+  },
+  "overexposed": {
+   "classical": {
+    "top1": 0.075,
+    "top5": 0.145,
+    "make_acc": 0.13,
+    "mean_confidence": 0.41061545461022775,
+    "mean_iou": 0.6299880828083783
+   },
+   "dl": {
+    "top1": 0.93,
+    "top5": 0.975,
+    "make_acc": 0.965,
+    "mean_confidence": 0.9299405834823847,
+    "mean_iou": 0.9444467778128436
+   },
+   "hybrid": {
+    "top1": 0.935,
+    "top5": 0.965,
+    "make_acc": 0.955,
+    "mean_confidence": 0.9265104684233666,
+    "mean_iou": 0.8916066163354602
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.935,
+    "reject_rate": 0.0
+   }
+  },
+  "low contrast": {
+   "classical": {
+    "top1": 0.045,
+    "top5": 0.15,
+    "make_acc": 0.13,
+    "mean_confidence": 0.402982452056761,
+    "mean_iou": 0.6666517250369037
+   },
+   "dl": {
+    "top1": 0.935,
+    "top5": 0.985,
+    "make_acc": 0.965,
+    "mean_confidence": 0.9373320499062539,
+    "mean_iou": 0.9396450701896998
+   },
+   "hybrid": {
+    "top1": 0.94,
+    "top5": 0.98,
+    "make_acc": 0.96,
+    "mean_confidence": 0.9230706590414047,
+    "mean_iou": 0.8947565765778337
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.94,
+    "reject_rate": 0.0
+   }
+  },
+  "gaussian blur": {
+   "classical": {
+    "top1": 0.03,
+    "top5": 0.09,
+    "make_acc": 0.075,
+    "mean_confidence": 0.4853782083992863,
+    "mean_iou": 0.6844804136625301
+   },
+   "dl": {
+    "top1": 0.575,
+    "top5": 0.785,
+    "make_acc": 0.69,
+    "mean_confidence": 0.636292168609798,
+    "mean_iou": 0.9214250983324166
+   },
+   "hybrid": {
+    "top1": 0.525,
+    "top5": 0.795,
+    "make_acc": 0.635,
+    "mean_confidence": 0.6272936402633786,
+    "mean_iou": 0.8842059380563118
+   },
+   "hybrid_decisions": {
+    "accept_rate": 0.995,
+    "accepted_acc": 0.5276381909547738,
+    "reject_rate": 0.005
+   }
+  },
+  "motion blur": {
+   "classical": {
+    "top1": 0.035,
+    "top5": 0.135,
+    "make_acc": 0.1,
+    "mean_confidence": 0.43932640141871643,
+    "mean_iou": 0.6260919299509822
+   },
+   "dl": {
+    "top1": 0.855,
+    "top5": 0.955,
+    "make_acc": 0.915,
+    "mean_confidence": 0.8465502674877644,
+    "mean_iou": 0.9254513103491139
+   },
+   "hybrid": {
+    "top1": 0.835,
+    "top5": 0.935,
+    "make_acc": 0.89,
+    "mean_confidence": 0.8313312741369009,
+    "mean_iou": 0.875054646014062
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.835,
+    "reject_rate": 0.0
+   }
+  },
+  "gaussian noise": {
+   "classical": {
+    "top1": 0.035,
+    "top5": 0.105,
+    "make_acc": 0.08,
+    "mean_confidence": 0.4008531508733028,
+    "mean_iou": 0.6123210195702546
+   },
+   "dl": {
+    "top1": 0.915,
+    "top5": 0.975,
+    "make_acc": 0.955,
+    "mean_confidence": 0.908878050595522,
+    "mean_iou": 0.9184542717891993
+   },
+   "hybrid": {
+    "top1": 0.905,
+    "top5": 0.97,
+    "make_acc": 0.94,
+    "mean_confidence": 0.8968221212923527,
+    "mean_iou": 0.8738612096187072
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.905,
+    "reject_rate": 0.0
+   }
+  },
+  "JPEG q=10": {
+   "classical": {
+    "top1": 0.08,
+    "top5": 0.14,
+    "make_acc": 0.17,
+    "mean_confidence": 0.4172882561238636,
+    "mean_iou": 0.6259415973765252
+   },
+   "dl": {
+    "top1": 0.825,
+    "top5": 0.915,
+    "make_acc": 0.875,
+    "mean_confidence": 0.836478764116764,
+    "mean_iou": 0.8490761147956786
+   },
+   "hybrid": {
+    "top1": 0.815,
+    "top5": 0.905,
+    "make_acc": 0.865,
+    "mean_confidence": 0.8361161760985851,
+    "mean_iou": 0.8110934793964054
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.815,
+    "reject_rate": 0.0
+   }
+  },
+  "resolution x0.5": {
+   "classical": {
+    "top1": 0.065,
+    "top5": 0.18,
+    "make_acc": 0.16,
+    "mean_confidence": 0.4212230904199393,
+    "mean_iou": 0.648407074894219
+   },
+   "dl": {
+    "top1": 0.935,
+    "top5": 0.99,
+    "make_acc": 0.97,
+    "mean_confidence": 0.921714389026165,
+    "mean_iou": 0.9448689750643314
+   },
+   "hybrid": {
+    "top1": 0.93,
+    "top5": 0.985,
+    "make_acc": 0.96,
+    "mean_confidence": 0.9093629461526871,
+    "mean_iou": 0.8973809871239996
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.93,
+    "reject_rate": 0.0
+   }
+  },
+  "resolution x0.25": {
+   "classical": {
+    "top1": 0.045,
+    "top5": 0.125,
+    "make_acc": 0.135,
+    "mean_confidence": 0.4639617907163607,
+    "mean_iou": 0.6443512784145349
+   },
+   "dl": {
+    "top1": 0.865,
+    "top5": 0.955,
+    "make_acc": 0.92,
+    "mean_confidence": 0.8455795423686504,
+    "mean_iou": 0.931990430705648
+   },
+   "hybrid": {
+    "top1": 0.825,
+    "top5": 0.93,
+    "make_acc": 0.87,
+    "mean_confidence": 0.8397415112704039,
+    "mean_iou": 0.8833268413069303
+   },
+   "hybrid_decisions": {
+    "accept_rate": 0.995,
+    "accepted_acc": 0.8291457286432161,
+    "reject_rate": 0.005
+   }
+  },
+  "occlusion 25%": {
+   "classical": {
+    "top1": 0.025,
+    "top5": 0.105,
+    "make_acc": 0.06,
+    "mean_confidence": 0.42288731481366404,
+    "mean_iou": 0.6500204265971888
+   },
+   "dl": {
+    "top1": 0.855,
+    "top5": 0.955,
+    "make_acc": 0.905,
+    "mean_confidence": 0.8717436069250106,
+    "mean_iou": 0.7850257181979751
+   },
+   "hybrid": {
+    "top1": 0.84,
+    "top5": 0.935,
+    "make_acc": 0.895,
+    "mean_confidence": 0.8654242590069771,
+    "mean_iou": 0.7604087486775367
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.84,
+    "reject_rate": 0.0
+   }
+  },
+  "occlusion 50%": {
+   "classical": {
+    "top1": 0.02,
+    "top5": 0.09,
+    "make_acc": 0.075,
+    "mean_confidence": 0.4288301359684559,
+    "mean_iou": 0.6432322491961432
+   },
+   "dl": {
+    "top1": 0.645,
+    "top5": 0.835,
+    "make_acc": 0.74,
+    "mean_confidence": 0.7273659045994282,
+    "mean_iou": 0.40606440517922804
+   },
+   "hybrid": {
+    "top1": 0.635,
+    "top5": 0.825,
+    "make_acc": 0.735,
+    "mean_confidence": 0.7318728334456682,
+    "mean_iou": 0.4074691082008017
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.635,
+    "reject_rate": 0.0
+   }
+  },
+  "truncated 25%": {
+   "classical": {
+    "top1": 0.025,
+    "top5": 0.12,
+    "make_acc": 0.055,
+    "mean_confidence": 0.432673781875352,
+    "mean_iou": 0.669756756849592
+   },
+   "dl": {
+    "top1": 0.925,
+    "top5": 0.985,
+    "make_acc": 0.96,
+    "mean_confidence": 0.9300288356095553,
+    "mean_iou": 0.9373615189391535
+   },
+   "hybrid": {
+    "top1": 0.91,
+    "top5": 0.975,
+    "make_acc": 0.955,
+    "mean_confidence": 0.9213113448768854,
+    "mean_iou": 0.900614846757006
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.91,
+    "reject_rate": 0.0
+   }
+  },
+  "rotation +/-15": {
+   "classical": {
+    "top1": 0.02,
+    "top5": 0.06,
+    "make_acc": 0.04,
+    "mean_confidence": 0.393865675687113,
+    "mean_iou": null
+   },
+   "dl": {
+    "top1": 0.935,
+    "top5": 0.98,
+    "make_acc": 0.97,
+    "mean_confidence": 0.9171695267409086,
+    "mean_iou": null
+   },
+   "hybrid": {
+    "top1": 0.915,
+    "top5": 0.98,
+    "make_acc": 0.955,
+    "mean_confidence": 0.9139316521584988,
+    "mean_iou": null
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.915,
+    "reject_rate": 0.0
+   }
+  },
+  "perspective warp": {
+   "classical": {
+    "top1": 0.065,
+    "top5": 0.15,
+    "make_acc": 0.15,
+    "mean_confidence": 0.4019509214196404,
+    "mean_iou": null
+   },
+   "dl": {
+    "top1": 0.93,
+    "top5": 0.98,
+    "make_acc": 0.97,
+    "mean_confidence": 0.9314925343543291,
+    "mean_iou": null
+   },
+   "hybrid": {
+    "top1": 0.94,
+    "top5": 0.98,
+    "make_acc": 0.97,
+    "mean_confidence": 0.9268583628535271,
+    "mean_iou": null
+   },
+   "hybrid_decisions": {
+    "accept_rate": 1.0,
+    "accepted_acc": 0.94,
+    "reject_rate": 0.0
+   }
+  }
+ }
+}
