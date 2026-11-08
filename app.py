@@ -48,7 +48,9 @@ pipe, warns = load_pipeline()
 for w in warns:
     st.warning(w)
 if pipe.clf is None:
+    from config import MODELS
     st.error(f"No trained classifier found at `{CLASSIFIER_CKPT}`. Run `python train.py` first (see README).")
+    st.caption("Files in the models folder: " + (", ".join(sorted(p.name for p in MODELS.glob("*"))) if MODELS.exists() else "(folder missing)"))
     st.stop()
 
 # ----------------------------------------------------------------------------- sidebar
