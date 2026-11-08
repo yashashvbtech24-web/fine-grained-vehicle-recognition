@@ -1,0 +1,12 @@
+{
+ "pad": 0.0,
+ "use_refine": true,
+ "use_illum": true,
+ "use_tta": true,
+ "use_fusion": false,
+ "fusion_alpha": 0.0,
+ "second_pass": true,
+ "classical_fallback": true,
+ "tau_exact": 0.10300000011920929,
+ "tau_make": 0.6
+}
