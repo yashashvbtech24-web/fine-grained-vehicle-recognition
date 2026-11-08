@@ -1,5 +1,7 @@
 # P5 - Intelligent Fine-Grained Vehicle Recognition (Stanford Cars)
 
+Live Demo Link: https://fine-grained-vehicle-recognition-aycflwg2yyykjhr3cln9p4.streamlit.app
+
 Hybrid system: **YOLO detection + fine-tuned CNN classification + classical computer vision**, with
 confidence-aware output, a Streamlit app and a measured, auto-generated evaluation report.
 
